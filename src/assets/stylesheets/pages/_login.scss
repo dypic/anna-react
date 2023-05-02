@@ -1,0 +1,47 @@
+.login {
+    text-align: center;
+    padding: 0 4.4rem;
+    &-form {
+        margin: 17.86vh auto 0;
+        &__logo {
+            fill: $color02;
+            margin-bottom: 3.2rem;
+        }
+        &__input {
+            input {
+                width: 100%;
+                display: inline-block;
+                box-sizing: border-box;
+                padding: 10px 0 12px;
+                border: 1px solid #E8E8E8;
+                background-color: $color-gray05;
+                border-radius: 4px;
+                text-indent: 1.7rem;
+                margin-bottom: 1.2rem;
+            }
+            button {
+                width: 100%;
+            }
+        }
+    }
+    &-social {
+        margin-top: 10.5rem;
+        &-list {
+            display: flex;
+            max-width: 84.32%;
+            margin: 2rem auto 5.5rem;
+            justify-content: center;
+            li {
+                width: 18.2%;
+                max-width: 7rem;
+                & + li {
+                    margin-left: 2.2rem;
+                }
+                img {
+                    display: inline-block;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

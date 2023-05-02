@@ -1,0 +1,22 @@
+.storeList{
+    &-wrap{
+        .storeList-inner{width: 100%; height: 10.8rem; display: flex; padding:1.5rem 0; border-bottom: 1px solid $color-gray04; box-sizing: border-box;
+            &-link{ display: flex;  min-width: 90%; height: 100%; border: none;
+                .storeList-img{max-width: 8.7rem; margin-right: 17px;
+                    > img {min-width: 100%; height: 100%; border-radius: 8px;  }
+                } 
+                .storeList-title {width: 100%; position: relative; margin: 0.3rem 0 0.4rem; overflow: hidden; 
+                    &_contents{ display: flex; flex-direction: column; min-width: 70%; 
+                        span { display: block; overflow: hidden; white-space: nowrap;  text-overflow: ellipsis;}
+                        small { margin-bottom: 10px;}
+                        // strong{ width: calc(100% - 20px); }
+                    }
+                    // &_likeIcon { position: absolute; bottom: 0; right: 0; z-index: 999;}
+                }
+                
+            }
+            // 하트 아이콘콘
+            .storeList-likeIcon{position: relative; min-width:10%; margin-top: 58px;}
+        }
+    }
+}

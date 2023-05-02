@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+// variables
+@import "./variables";
+
+//reset & base
+@import "./base";
+
+//font
+@import "./font";
+
+//guide 
+@import "./guide";
+
+//gide
+@import "./mainLayout";
+
+//page 스타일
+@import "./pages/login";
+
+@import "./pages/homeStoreList";
+
+@import "./pages/storeItem";
+
+@import "./pages/chatting";
