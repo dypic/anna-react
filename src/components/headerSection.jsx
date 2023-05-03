@@ -53,13 +53,14 @@ const HeadersSection = ({ locationIcon }) => {
         </div>
       </header>
       <ul className={`side-filter title4-KR ${openFilter ? "on" : ""}`}>
-        <li className="side-filter__close-btn side-filter-item">
+        <li className="side-filter__close-btn side-filter-item" style={{ padding: "0" }}>
           <button
             type="button"
             onClick={() => {
               setOpenFilter(false)
               document.querySelector("body").style.overflow = "auto"
             }}
+            style={{ padding: "1.6rem 2.6rem 1.6rem 3.6rem" }}
           >
             <img src={imgIconClose} alt="닫기" />
           </button>
