@@ -10,8 +10,9 @@ function App() {
     <Routes>
       <Route path="/" element={<Main />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/storeItem" element={<StoreItem />} />
-      <Route path="/chatting" element={<Chatting />} />
+      <Route path="/storeItem/:id" element={<StoreItem />} />
+      <Route path="/chatting/:id" element={<Chatting />} />
+      <Route path="/*" element={<div style={{ fontSize: "38px", textAlign: "center" }}>페이지가 없어요</div>} />
     </Routes>
   )
 }
