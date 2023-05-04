@@ -37,6 +37,8 @@ module.exports = {
     "react/jsx-props-no-spreading": "off", // props를 스프래드 할 수 있다.
     "jsx-a11y/anchor-is-valid": "off", // js에서는 a에 href없이 사용
     "global-require": "off", // 함수 내에서 require 사용가능
+    "react/destructuring-assignment": [0, "always"], // 코드 내에 props 상속
+    "no-nested-ternary": "off", // 삼항연산자
     "react/function-component-definition": [
       2,
       { namedComponents: ["arrow-function", "function-declaration"] }, // 함수 스타일 지정
