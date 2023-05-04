@@ -6,6 +6,7 @@ import { Pagination } from "swiper"
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/swiper.min.css"
 import "swiper/swiper-bundle.css"
+import Button from "components/common/Button"
 
 const StoreItem = () => {
   return (
@@ -48,9 +49,7 @@ const StoreItem = () => {
             <span className="small2">10</span>
           </a>
         </div>
-        <button type="button" className="btn-m pry-btn1">
-          채팅하기
-        </button>
+        <Button prybtn1="true">채팅하기</Button>
       </div>
     </div>
   )

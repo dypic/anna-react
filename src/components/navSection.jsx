@@ -8,16 +8,17 @@ import imgIconGet from "assets/images/icon-gnb-w02.svg"
 import imgIconAdd from "assets/images/icon-gnb-add.svg"
 import imgIconTown from "assets/images/icon-gnb-w03.svg"
 import imgIconOwn from "assets/images/icon-gnb-w04.svg"
+import { Link } from "react-router-dom"
 
 const NavSection = ({ locationIcon }) => {
   return (
     <nav className=" nav-wrap">
       <ul className="nav-list">
         <li className="active">
-          <a href="#">
+          <Link to="/">
             <img src={locationIcon === "home" ? imgIconHomeOn : imgIconHome} alt="홈홈" />
             <span className="small2">홈</span>
-          </a>
+          </Link>
         </li>
         <li>
           <a href="#">

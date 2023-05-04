@@ -1,8 +1,11 @@
 import imgIconPointer from "assets/images/icon-pointer.png"
 import imgIconPuls from "assets/images/chatting-message_plus.png"
 import { useState } from "react"
+import Button from "components/common/Button"
+import { useNavigate } from "react-router-dom"
 
 const Chatting = () => {
+  const navigate = useNavigate()
   const [openPopup, setOpenPopup] = useState(false)
 
   return (
@@ -10,18 +13,16 @@ const Chatting = () => {
       <div className="chatting container-maxWidth">
         <div className="chatting-header">
           <div className="chatting-header-location">
-            <a href="#">
+            <button type="button" onClick={() => navigate(-1)}>
               <img src={imgIconPointer} alt="뒤로가기" />
-            </a>
+            </button>
             <span className="title4-KR">용용</span>
           </div>
           <div className="chatting-header-btns">
-            <button type="button" className="btn-s secon-btn1">
-              <a href="#">프로필 보기</a>
-            </button>
-            <button type="button" className="btn-s secon-btn2" onClick={() => setOpenPopup(true)}>
+            <Button seconbtn1="true">프로필 보기</Button>
+            <Button seconbtn2="true" onClick={() => setOpenPopup(true)}>
               거래하기
-            </button>
+            </Button>
           </div>
         </div>
 
@@ -57,12 +58,10 @@ const Chatting = () => {
               <option value="item3">에어팟 프로 / 3세대 (7,000원 / 1일)</option>
             </select>
             <div className="chatting-popup__btns">
-              <button type="button" className="btn-s secon-btn2" onClick={() => setOpenPopup(false)}>
+              <Button seconbtn2="true" onClick={() => setOpenPopup(false)}>
                 거래 중단
-              </button>
-              <button type="button" className="btn-s secon-btn1">
-                거래 진행
-              </button>
+              </Button>
+              <Button seconbtn1="true">거래 진행</Button>
             </div>
           </div>
           <button type="button" className="chatting-popup-bg" onClick={() => setOpenPopup(false)} />
