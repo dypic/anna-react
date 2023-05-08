@@ -1,6 +1,6 @@
 //header 영역
 .header-wrap {max-width: calc(72rem - 3.2rem); width:calc(100% - 3.2rem);  padding:0 1.6rem; display: flex; justify-content: space-between; align-items: center; position: fixed; z-index: 9999; background-color: $color-gray06; 
-    .header-inner {width: 100%;height: 5.542rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid $color-gray04;  }
+    .header-inner {width: 100%;height: 4.4rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid $color-gray04;  }
     .home-title {margin: 0.7rem 0;}
     .home-topicon { display: flex; align-items: center;
         a {cursor: pointer;}
@@ -18,7 +18,7 @@
     .nav-list > li > a > img { margin: 0 auto; margin-bottom: 5px;}
 }
 //내용 
-.container-wrap{ padding:5.542rem 1.6rem 8.3rem; }
+.container-wrap{ padding: 4.4rem 1.6rem 8.3rem; }
 
 //사이드메뉴
 .header-position {
@@ -42,7 +42,13 @@
         &.on {height: 604px;}
     }
     &-item {padding: 1.6rem 2.6rem 1.6rem 3.6rem; cursor: pointer;}
-    &__close-btn img { max-width: 1.4rem; vertical-align: middle;}
+    &__close-btn { 
+        padding-top: 0;
+        padding-bottom: 0;
+        height: 4.4rem;
+        button { height: 100%;  padding: 0 2.6rem 0 3.6rem;}
+        img { max-width: 1.4rem; vertical-align: middle;}
+    } 
     &_flex {display: flex; justify-content: space-between; align-items: center; padding: 1.6rem 2.6rem 1.6rem 3.6rem; cursor: pointer;}
     li{ border-bottom: 1px solid #E8E8E8;
         

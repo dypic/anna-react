@@ -9,8 +9,10 @@ import "swiper/swiper.min.css"
 import "swiper/swiper-bundle.css"
 import Button from "components/common/Button"
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 const StoreItem = () => {
+  const navigate = useNavigate()
   const [like, setLike] = useState(false)
 
   return (
@@ -53,7 +55,9 @@ const StoreItem = () => {
             {like === true ? "11" : "10"}
           </span>
         </button>
-        <Button addclass="chatting-btn pry-btn1">채팅하기</Button>
+        <Button addclass="chatting-btn pry-btn1" onClick={() => navigate("/chatting/:id")}>
+          채팅하기
+        </Button>
       </div>
     </div>
   )

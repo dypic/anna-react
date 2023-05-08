@@ -60,7 +60,6 @@ const HeadersSection = ({ locationIcon }) => {
               setOpenFilter(false)
               document.querySelector("body").style.overflow = "auto"
             }}
-            style={{ padding: "1.6rem 2.6rem 1.6rem 3.6rem" }}
           >
             <img src={imgIconClose} alt="닫기" />
           </button>
