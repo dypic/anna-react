@@ -7,8 +7,10 @@
         border-bottom: 1px solid $color-gray04;
         &-location{
             margin-bottom: 1.1rem;
+            display: flex;
+            align-items: center;
            button {
-            width: 0.8rem;
+            width: 2.4rem;
             display: inline-block;
             margin-right: 2rem;
             img {

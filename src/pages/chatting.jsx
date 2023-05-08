@@ -1,4 +1,4 @@
-import imgIconPointer from "assets/images/icon-pointer.png"
+import imgIconPointer from "assets/images/icon-back.svg"
 import imgIconPuls from "assets/images/chatting-message_plus.png"
 import { useState } from "react"
 import Button from "components/common/Button"
