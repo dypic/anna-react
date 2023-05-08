@@ -1,4 +1,7 @@
 .chatting{
+    .btn-s {
+        width: 50%;
+    }
     &-header {
         padding: 1.6rem;
         border-bottom: 1px solid $color-gray04;
@@ -67,6 +70,9 @@
     &-popup {
         margin: 0 auto;
         max-width: 72rem;
+        .btn-s {
+            width: 50%;
+        }
         &__wrap {
             width: 100%;
             max-width: 72rem;

@@ -19,8 +19,8 @@ const Chatting = () => {
             <span className="title4-KR">용용</span>
           </div>
           <div className="chatting-header-btns">
-            <Button seconbtn1="true">프로필 보기</Button>
-            <Button seconbtn2="true" onClick={() => setOpenPopup(true)}>
+            <Button addclass="secon-btn1">프로필 보기</Button>
+            <Button addclass="secon-btn2" onClick={() => setOpenPopup(true)}>
               거래하기
             </Button>
           </div>
@@ -58,10 +58,10 @@ const Chatting = () => {
               <option value="item3">에어팟 프로 / 3세대 (7,000원 / 1일)</option>
             </select>
             <div className="chatting-popup__btns">
-              <Button seconbtn2="true" onClick={() => setOpenPopup(false)}>
+              <Button addclass="secon-btn2" onClick={() => setOpenPopup(false)}>
                 거래 중단
               </Button>
-              <Button seconbtn1="true">거래 진행</Button>
+              <Button addclass="secon-btn1">거래 진행</Button>
             </div>
           </div>
           <button type="button" className="chatting-popup-bg" onClick={() => setOpenPopup(false)} />

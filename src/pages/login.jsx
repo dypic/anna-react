@@ -26,7 +26,7 @@ const Login = () => {
         <div className="login-form__input">
           <input type="text" placeholder="아이디" className="body3" />
           <input type="password" placeholder="패스워드" className="body3" />
-          <Button prybtn1="true">로그인</Button>
+          <Button addclass="pry-btn1">로그인</Button>
         </div>
       </div>
       <div className="login-social">

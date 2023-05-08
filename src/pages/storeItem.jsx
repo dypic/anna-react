@@ -1,4 +1,5 @@
 import imgSample from "assets/images/sample.png"
+import imgIconOnclikLike from "assets/images/Vector.svg"
 import imgIconLike from "assets/images/icon-like.png"
 import HeadersSection from "components/headerSection"
 
@@ -7,8 +8,11 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/swiper.min.css"
 import "swiper/swiper-bundle.css"
 import Button from "components/common/Button"
+import { useState } from "react"
 
 const StoreItem = () => {
+  const [like, setLike] = useState(false)
+
   return (
     <div className="container-maxWidth storeItem">
       <HeadersSection />
@@ -43,13 +47,13 @@ const StoreItem = () => {
         </p>
       </div>
       <div className="storeItem-menu">
-        <div className="storeItem-menu__like">
-          <a href="#">
-            <img src={imgIconLike} alt="like-btn" />
-            <span className="small2">10</span>
-          </a>
-        </div>
-        <Button prybtn1="true">채팅하기</Button>
+        <button className="storeItem-menu__like" type="button" onClick={() => setLike(!like)}>
+          <img src={like === true ? imgIconOnclikLike : imgIconLike} alt="like" />
+          <span className="small2" style={like === true ? { color: "red" } : { color: "#9E9E9E" }}>
+            {like === true ? "11" : "10"}
+          </span>
+        </button>
+        <Button addclass="chatting-btn pry-btn1">채팅하기</Button>
       </div>
     </div>
   )
