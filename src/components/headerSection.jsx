@@ -17,40 +17,38 @@ const HeadersSection = ({ locationIcon }) => {
   return (
     <>
       <header className="header-wrap">
-        <div className="header-inner">
-          {locationIcon === "logo" ? (
-            <Link to="/" href="#" className="home-title heading1-KR">
-              안나
-            </Link>
-          ) : (
-            <button type="button" onClick={() => navigate(-1)} className="header-inner-back">
-              <img src={imgIconPointer} alt="뒤로가기" />
+        {locationIcon === "logo" ? (
+          <Link to="/" href="#" className="home-title heading1-KR">
+            안나
+          </Link>
+        ) : (
+          <button type="button" onClick={() => navigate(-1)} className="header-inner-back">
+            <img src={imgIconPointer} alt="뒤로가기" />
+          </button>
+        )}
+        <ul className="home-topIcon">
+          <li>
+            <button type="button">
+              <img src={imgIconSearch} alt="검색" />
             </button>
-          )}
-          <ul className="home-topIcon">
-            <li>
-              <button type="button">
-                <img src={imgIconSearch} alt="검색" />
-              </button>
-            </li>
-            <li>
-              <button type="button">
-                <img src={imgIconAlarm} alt="알림" />
-              </button>
-            </li>
-            <li>
-              <button
-                type="button"
-                onClick={() => {
-                  setOpenFilter(true)
-                  document.querySelector("body").style.overflow = "hidden"
-                }}
-              >
-                <img src={imgIconMenu} alt="메뉴" />
-              </button>
-            </li>
-          </ul>
-        </div>
+          </li>
+          <li>
+            <button type="button">
+              <img src={imgIconAlarm} alt="알림" />
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              onClick={() => {
+                setOpenFilter(true)
+                document.querySelector("body").style.overflow = "hidden"
+              }}
+            >
+              <img src={imgIconMenu} alt="메뉴" />
+            </button>
+          </li>
+        </ul>
       </header>
       <ul className={`side-filter title4-KR ${openFilter ? "on" : ""}`}>
         <li className="side-filter__close-btn side-filter-item" style={{ padding: "0" }}>
