@@ -12,40 +12,39 @@ import { Link } from "react-router-dom"
 
 const NavSection = ({ locationIcon }) => {
   return (
-    <nav className=" nav-wrap">
-      <ul className="nav-list">
-        <li className="active">
-          <Link to="/">
-            <img src={locationIcon === "home" ? imgIconHomeOn : imgIconHome} alt="홈홈" />
-            <span className="small2">홈</span>
-          </Link>
-        </li>
-        <li>
-          <a href="#">
-            <img src={imgIconGet} alt="구해요" />
-            <span className="small2">구해요</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <img src={imgIconAdd} alt="추가" />
-            <span className="small2">추가</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <img src={imgIconTown} alt="동네정보" />
-            <span className="small2">동네정보</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <img src={imgIconTown} alt="마이페이지" />
-            <span className="small2">마이페이지</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
+    <div className="nav">
+      <nav className=" nav-wrap">
+        <ul className="nav-list">
+          <li className="active">
+            <Link to="/">
+              <img src={locationIcon === "home" ? imgIconHomeOn : imgIconHome} alt="홈홈" />
+              <span className="small2">홈</span>
+            </Link>
+          </li>
+          <li>
+            <a href="#">
+              <img src={imgIconGet} alt="구해요" />
+              <span className="small2">구해요</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src={imgIconTown} alt="동네정보" />
+              <span className="small2">동네정보</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src={imgIconTown} alt="마이페이지" />
+              <span className="small2">마이페이지</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <button type="button" className="nav-write-btn">
+        글쓰기
+      </button>
+    </div>
   )
 }
 
