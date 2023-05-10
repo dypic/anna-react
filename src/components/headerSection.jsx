@@ -27,7 +27,7 @@ const HeadersSection = ({ locationIcon }) => {
               <img src={imgIconPointer} alt="뒤로가기" />
             </button>
           )}
-          <ul className="home-topicon">
+          <ul className="home-topIcon">
             <li>
               <button type="button">
                 <img src={imgIconSearch} alt="검색" />

@@ -1,7 +1,7 @@
 import HeadersSection from "components/headerSection"
 import NavSection from "components/navSection"
 // import imgSample from "assets/images/sample-item.png"
-import imgIconOnclikLike from "assets/images/Vector.svg"
+import imgIconLikeOn from "assets/images/icon-like-on.svg"
 import imgIconLike from "assets/images/icon-like.svg"
 import { useState } from "react"
 
@@ -95,7 +95,7 @@ const Main = () => {
                   </div>
                 </a>
                 <button className="storeList-likeIcon" type="button" onClick={() => onClickLike(idx)}>
-                  <img src={item.like === "true" ? imgIconOnclikLike : imgIconLike} alt="like" />
+                  <img src={item.like === "true" ? imgIconLikeOn : imgIconLike} alt="like" />
                 </button>
               </li>
             )

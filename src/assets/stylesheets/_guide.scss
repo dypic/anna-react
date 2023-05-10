@@ -1,100 +1,271 @@
+.guide {
+  margin: 13rem auto;
+  max-width: 170rem;
+  td {
+    width: calc(60% / 6);
+  }
+  tr {
+    height: 78px;
+  }
+  p {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 1.7rem;
+  }
+  .wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+  }
+  &-left-wrap {
+    width: calc(45% - 2.5rem);
+  }
+  &-font_info {
+    margin-bottom: 3.8rem;
+    span {
+      font-size: 1.5rem;
+      margin-bottom: 3.8rem;
+      font-weight: 500;
+      &:last-child {
+        margin-left: 2rem;
+      }
+    }
+  }
+  &-fontArea {
+    font-weight: 500;
+    .solid1 {
+      border-bottom: 1px solid black;
+    }
+    .solid2 {
+      border-bottom: 2px solid black;
+    }
+    .guide-thead > tr th {
+      font-size: 17px;
+      text-align: left;
+    }
+    .guide-body {
+      &-inner {
+        td {
+          vertical-align: middle;
+        }
+        td:not(:nth-child(2)) {
+          font-size: 15px;
+        }
+        .Preview {
+          width: 22%;
+        }
+        .scaleTitle {
+          font-size: 20px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  &-etcArea {
+    width: calc(55% - 2.5rem);
+    span {
+      font-size: 2.2rem;
+      font-weight: 500;
+    }
+    &_color {
+      ul {
+        display: flex;
+        margin-bottom: 1rem;
+        li {
+          width: 57px;
+          height: 57px;
+          margin-right: 1rem;
+          padding: 1rem;
+          border: 0.5px solid #d6d4dc;
+          border-radius: 12px;
+          font-size: 15px;
+          font-weight: 500;
+        }
+      }
+    }
+    &_btn {
+      > div {
+        width: calc(100% - 2rem);
+        line-height: 1;
+        display: flex;
+        justify-content: space-between;
+        margin: 1rem;
+        gap: 1%;
+      }
+    }
+    &_icon-gnb {
+      ul {
+        width: 40%;
+        height: 44px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+    &_color,
+    &_btn,
+    &_icon-gnb {
+      margin-bottom: 5rem;
+    }
+  }
+}
 
-.guide{
-    margin: 13rem auto;
-    max-width: 170rem;
-    td{width: calc(60% / 6);}
-    tr{height: 78px;}
-    p{font-size:2.8rem; font-weight: bold; margin-bottom:1.7rem;}
-    .wrap{width: 100%; display: flex; justify-content: space-between; gap:5rem}
-    &-left-wrap {
-        width: calc(45% - 2.5rem);
-    }
-    &-font_info{
-        margin-bottom: 3.8rem;
-        span{ font-size: 1.5rem; margin-bottom: 3.8rem; font-weight: 500;
-            &:last-child {
-                margin-left: 2rem;
-            }
-        }
-    }
-    &-fontArea{
-        font-weight: 500;
-        .solid1{border-bottom: 1px solid black;}
-        .solid2{border-bottom: 2px solid black;}
-        .guide-thead > tr th{font-size: 17px; text-align: left;}
-        .guide-body{
-            &-inner{ 
-                td{vertical-align: middle;}
-                td:not(:nth-child(2)){font-size: 15px;}
-                .Preview{width: 22%;}
-                .scaleTitel{font-size: 20px; font-weight: bold;}
-            }
-        }
-    }
-    &-etcArea{
-        width: calc(55% - 2.5rem);
-        span{font-size: 2.2rem; font-weight: 500;}
-        &_color{
-            ul{display: flex; margin-bottom: 1rem;
-                li { width: 57px;height: 57px;margin-right: 1rem; padding: 1rem; border: 0.5px solid #D6D4DC; border-radius: 12px; font-size: 15px; font-weight: 500;}
-            }
-        }
-        &_btn{
-            > div{width: calc(100% - 2rem);line-height: 1; display: flex; justify-content: space-between; margin: 1rem; gap: 1%;
-            }
-        }
-        &_icon-gnb{
-            ul {width:40%; height: 44px; display: flex; justify-content: space-between; align-items: center;
-            }
-        }
-        &_color, &_btn,&_icon-gnb {
-            margin-bottom: 5rem;
-        }
-    }
-}   
-
-
-// Text Style 폰트가이드 
+// Text Style 폰트가이드
 // font-weight// medium= 500 //	Regular = 400
-.heading1-KR{ font-size: 2.2rem; font-weight: bold; line-height: 1.454545454545455; } 
-.heading1-EN {font-size: 2.2rem; font-weight: bold; line-height: 1.363636363636364;}
-.title1{font-size: 1.8rem; font-weight: bold; line-height: 1.444444444444444;}
-.title2{font-size: 1.8rem; font-weight: 500; line-height:  1.444444444444444;}
-.title3{font-size: 1.5rem; font-weight: bold; line-height: 1.466666666666667;}
-.title4-KR{font-size: 1.5rem; font-weight: 500; line-height: 1.466666666666667;}
-.title4-EN{font-size: 1.6rem; font-weight: 500; line-height:1.375;}
-.body1{font-size: 1.6rem; font-weight: 400; line-height:1.5;}
-.body2{font-size: 1.5rem; font-weight: bold; line-height:1.466666666666667;}
-.body3{font-size: 1.5rem; font-weight: 400; line-height:1.466666666666667;}
-.small1{font-size: 1.3rem; font-weight: 400; line-height: 1.461538461538462;}
-.small2{font-size: 1.1rem; font-weight: 500; line-height: 1.454545454545455;}
-.small3{font-size: 1.1rem; font-weight: 400; line-height: 1.454545454545455;}
-.button1{font-size: 1.7rem; font-weight: 500; line-height: 1.470588235294118;}
-.button2{font-size: 1.5rem; font-weight: 500; line-height: 1.466666666666667;}
+.heading1-KR {
+  font-size: 2.2rem;
+  font-weight: bold;
+  line-height: 1.454545454545455;
+}
+.heading1-EN {
+  font-size: 2.2rem;
+  font-weight: bold;
+  line-height: 1.363636363636364;
+}
+.title1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1.444444444444444;
+}
+.title2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.444444444444444;
+}
+.title3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.466666666666667;
+}
+.title4-KR {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.466666666666667;
+}
+.title4-EN {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.375;
+}
+.body1 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.body2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.466666666666667;
+}
+.body3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.466666666666667;
+}
+.small1 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.461538461538462;
+}
+.small2 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.454545454545455;
+}
+.small3 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.454545454545455;
+}
+.button1 {
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 1.470588235294118;
+}
+.button2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.466666666666667;
+}
 // 폰트 가이드 끝
 
+// 버튼 가이드
+.btn-l {
+  width: 34.3rem;
+  height: 4.4rem;
+  font-size: 1.7rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
+.btn-m {
+  width: 29.1rem;
+  height: 4.4rem;
+  font-size: 1.7rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
+.btn-s {
+  width: 16.6rem;
+  height: 4.4rem;
+  font-size: 1.7rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
 
-// 버튼 가이드 
-.btn-l{width: 34.3rem; height: 4.4rem; font-size: 1.7rem; border-radius: 4px; font-weight: 500;}
-.btn-m{width: 29.1rem; height: 4.4rem; font-size: 1.7rem; border-radius: 4px; font-weight: 500;}
-.btn-s{width: 16.6rem; height: 4.4rem; font-size: 1.7rem; border-radius: 4px; font-weight: 500;}
-
-.pry-btn1{background-color:$color01; color:$color-gray01;  }
-.pry-btn2{ background-color:$color-gray04 ; color: $color-gray03;}
-.secon-btn1{ background-color:$color-gray02 ; color:$color-gray06;  }
-.secon-btn2{ background-color:$color-gray06 ;  color:$color-gray01; border:1px solid #000 ;}
-
+.pry-btn1 {
+  background-color: $color01;
+  color: $color-gray01;
+}
+.pry-btn2 {
+  background-color: $color-gray04;
+  color: $color-gray03;
+}
+.secon-btn1 {
+  background-color: $color-gray02;
+  color: $color-gray06;
+}
+.secon-btn2 {
+  background-color: $color-gray06;
+  color: $color-gray01;
+  border: 1px solid #000;
+}
 
 // Color가이드
-.Primary{background-color: #F5D25D ;}
-.Primary-Variant{background-color: #EFBB51;}
-.Back-ground{background-color:#FFFFFF ;}
-.gray-scale01{background-color:$color-gray01; color: #FFFFFF;}
-.gray-scale02{background-color:$color-gray02 ;}
-.gray-scale03{background-color:$color-gray03 ;}
-.gray-scale04{background-color:$color-gray04 ;}
-.gray-scale05{background-color:$color-gray05 ;}
-.gray-scale06{background-color:$color-gray06 ;}
+.Primary {
+  background-color: #f5d25d;
+}
+.Primary-Variant {
+  background-color: #efbb51;
+}
+.Back-ground {
+  background-color: #ffffff;
+}
+.gray-scale01 {
+  background-color: $color-gray01;
+  color: #ffffff;
+}
+.gray-scale02 {
+  background-color: $color-gray02;
+}
+.gray-scale03 {
+  background-color: $color-gray03;
+}
+.gray-scale04 {
+  background-color: $color-gray04;
+}
+.gray-scale05 {
+  background-color: $color-gray05;
+}
+.gray-scale06 {
+  background-color: $color-gray06;
+}
 
 // 공통 클래스 컨테이너
-.container-maxWidth {max-width: 72rem;margin: 0 auto;position: relative;height: 100%;overflow: hidden;}
+.container-maxWidth {
+  max-width: 72rem;
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}

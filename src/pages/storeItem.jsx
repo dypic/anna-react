@@ -1,6 +1,6 @@
 import imgSample from "assets/images/sample.png"
-import imgIconOnclikLike from "assets/images/Vector.svg"
-import imgIconLike from "assets/images/icon-like.png"
+import imgIconLikeOn from "assets/images/icon-like-on.svg"
+import imgIconLike from "assets/images/icon-like.svg"
 import HeadersSection from "components/headerSection"
 
 import { Pagination } from "swiper"
@@ -20,13 +20,13 @@ const StoreItem = () => {
       <HeadersSection />
       <Swiper modules={[Pagination]} pagination={{ clickable: true }}>
         <SwiperSlide>
-          <img src={imgSample} alt="item-airpot" />
+          <img src={imgSample} alt="item-sample" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={imgSample} alt="item-airpot" />
+          <img src={imgSample} alt="item-sample" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={imgSample} alt="item-airpot" />
+          <img src={imgSample} alt="item-sample" />
         </SwiperSlide>
       </Swiper>
       <div className="storeItem-item-name">
@@ -50,7 +50,7 @@ const StoreItem = () => {
       </div>
       <div className="storeItem-menu">
         <button className="storeItem-menu__like" type="button" onClick={() => setLike(!like)}>
-          <img src={like === true ? imgIconOnclikLike : imgIconLike} alt="like" />
+          <img src={like === true ? imgIconLikeOn : imgIconLike} alt="like" />
           <span className="small2" style={like === true ? { color: "red" } : { color: "#9E9E9E" }}>
             {like === true ? "11" : "10"}
           </span>
