@@ -1,0 +1,91 @@
+.addItem {
+    height: 100vh;
+    overflow-y: auto;
+    &-img {
+        margin: 2rem 3.6rem;
+        position: relative;
+        height: 5.9rem;
+        overflow-x: scroll;
+        overflow-y: clip;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+        &::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera*/
+        }
+        input {
+            display: none;
+        }
+        &List {
+            display: inline-flex;
+            gap: 0.5rem;
+            position: absolute;
+            top: 0;
+            li { 
+                width: 5.7rem;
+                height: 5.7rem;
+                display: inline-block;
+                border: 1px solid $color-gray04;
+                border-radius: 0.4rem;
+                .adding-img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                    display: inline-block;
+                }
+                label img {
+                    display: block;
+                    padding: 1.8rem 1.7rem;
+                    width: auto;
+                }
+            }
+        }
+    }
+    &-valueList {
+        li {
+            display: flex;
+            padding: 1.8rem 1.6rem;
+            justify-content: space-between;
+            border-bottom: 1px solid $color-gray04;
+            position: relative;
+            img {
+                transform: rotate(180deg);
+                width: 0.6rem;
+            }
+            div {
+                display: flex;
+                align-items: center;
+                gap: 0.9rem
+            }
+        }
+        &-link {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    }
+    textarea {
+        font-family: $font-family;
+        width: calc(100% - 3.2rem);
+        margin: 0 1.6rem;
+        background-color: $color-gray05;
+        border: 0;
+        padding: 1.6rem 2rem;
+        box-sizing: border-box;
+        outline: none;
+        resize: none;
+        height: calc(100% - 55.5rem); // textarea을 제외한 나머지 컨텐츠의 높이를 뺌
+        &::placeholder {
+            color: $color-gray01;
+        }
+    }
+    &-buttons {
+        display: flex;
+        margin: 1.2rem 1.6rem 4.1rem;
+        gap: 1.2rem;
+        button {
+            width: 50%;
+        }
+    }
+}

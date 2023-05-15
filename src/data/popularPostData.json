@@ -1,0 +1,23 @@
+[
+    {
+      "img": "/public_assets/sample.png",
+      "label": "질문",
+      "title": "제목제목제목제목제목제목제제목제목",
+      "like": "12",
+      "comment": "10"
+    },
+    {
+      "img": "/public_assets/sample.png",
+      "label": "분실물",
+      "title": "제목제목제목제목제목제목",
+      "like": "12",
+      "comment": "10"
+    },
+    {
+      "img": "/public_assets/sample.png",
+      "label": "모임",
+      "title": "제목제목제목제목제목제목제",
+      "like": "12",
+      "comment": "10"
+    }
+]

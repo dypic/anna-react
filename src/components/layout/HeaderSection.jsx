@@ -4,9 +4,9 @@ import imgIconMenu from "assets/images/icon-menu.svg"
 import imgIconPointer from "assets/images/icon-pointer.png"
 import imgIconClose from "assets/images/icon-close.png"
 import { useRef, useState } from "react"
-import { useNavigate, Link } from "react-router-dom"
+import { useNavigate, useLocation } from "react-router-dom"
 
-const HeadersSection = ({ locationIcon }) => {
+const HeadersSection = () => {
   const navigate = useNavigate()
   const [openFilter, setOpenFilter] = useState(false)
   const depth2 = useRef()
@@ -14,18 +14,41 @@ const HeadersSection = ({ locationIcon }) => {
     depth2.current.classList.toggle("on")
     depth2.current.nextElementSibling.classList.toggle("on")
   }
+
+  const location = useLocation()
+  const locationIcon = location.pathname
+
   return (
     <>
       <header className="header-wrap">
-        {locationIcon === "logo" ? (
-          <Link to="/" href="#" className="home-title heading1-KR">
-            안나
-          </Link>
+        {locationIcon ? (
+          <p className="home-title heading1-KR">
+            {locationIcon === "/"
+              ? "안나"
+              : locationIcon === "/getItem"
+              ? "구해요"
+              : locationIcon === "/townInfo"
+              ? "동네정보"
+              : locationIcon === "/myPage"
+              ? "마이페이지"
+              : ""}
+          </p>
         ) : (
           <button type="button" onClick={() => navigate(-1)} className="header-inner-back">
             <img src={imgIconPointer} alt="뒤로가기" />
           </button>
         )}
+        {/* {locationIcon === "/" ? (
+          <p className="home-title heading1-KR">안나</p>
+        ) : locationIcon === "/getItem" ? (
+          <p className="home-title heading1-KR">구해요</p>
+        ) : locationIcon === "/townInfo" ? (
+          <p className="home-title heading1-KR">동네정보</p>
+        ) : (
+          <button type="button" onClick={() => navigate(-1)} className="header-inner-back">
+            <img src={imgIconPointer} alt="뒤로가기" />
+          </button>
+        )} */}
         <ul className="home-topIcon">
           <li>
             <button type="button">

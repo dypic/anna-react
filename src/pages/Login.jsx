@@ -24,9 +24,11 @@ const Login = () => {
           />
         </svg>
         <div className="login-form__input">
-          <input type="text" placeholder="아이디" className="body3" />
-          <input type="password" placeholder="패스워드" className="body3" />
-          <Button addclass="pry-btn1">로그인</Button>
+          <form action="">
+            <input type="text" placeholder="아이디" className="body3" />
+            <input type="password" placeholder="패스워드" className="body3" autoComplete="off" />
+            <Button addclass="pry-btn1">로그인</Button>
+          </form>
         </div>
       </div>
       <div className="login-social">

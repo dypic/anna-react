@@ -1,7 +1,7 @@
 import imgSample from "assets/images/sample.png"
 import imgIconLikeOn from "assets/images/icon-like-on.svg"
 import imgIconLike from "assets/images/icon-like.svg"
-import HeadersSection from "components/headerSection"
+import HeadersSection from "components/layout/HeaderSection"
 
 import { Pagination } from "swiper"
 import { Swiper, SwiperSlide } from "swiper/react"

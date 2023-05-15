@@ -18,6 +18,7 @@ module.exports = {
   },
   plugins: ["react"],
   rules: {
+    indent: "off",
     "linebreak-style": 0,
     semi: ["error", "never"], // 세미클론 없음
     quotes: ["error", "double"], // 더블 쿼터 사용

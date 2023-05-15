@@ -1,0 +1,21 @@
+.myPage {
+    ul li a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.2rem 1.6rem 1.6rem;
+        border-bottom: 1px solid $color-gray04;
+        > img {
+            width: 0.6rem;
+            transform: rotate(180deg);
+        }
+        span {
+            vertical-align: middle;
+            img {
+                width: 6.4rem;
+                margin-right: 1.7rem;
+                vertical-align: middle;
+            }
+        } 
+    }
+}

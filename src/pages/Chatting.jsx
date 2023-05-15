@@ -1,5 +1,5 @@
 import imgIconPointer from "assets/images/icon-back.svg"
-import imgIconPuls from "assets/images/icon-message_plus.png"
+import imgIconPlusCircle from "assets/images/icon-message_plus.png"
 import { useState } from "react"
 import Button from "components/common/Button"
 import { useNavigate } from "react-router-dom"
@@ -44,7 +44,7 @@ const Chatting = () => {
         </div>
         <div className="chatting-message">
           <a href="#">
-            <img src={imgIconPuls} alt="메시지 더보기" />
+            <img src={imgIconPlusCircle} alt="메시지 더보기" />
           </a>
           <input className="body3" type="text" placeholder="메시지를 입력하세요." />
         </div>

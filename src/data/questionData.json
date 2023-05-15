@@ -1,0 +1,17 @@
+[
+   {
+    "profileImg": "/public_assets/sample-profile.png",
+    "nickName" : "닉네임123",
+    "distance" : "5km",
+    "date" : "10분 전",
+    "contentText": "질문이 있습니다. 질문이 있습니다. 질문이 있습니다.질문이 있습니다.질문이 있습니다. 질문이 있습니다.질문이 있습니다.", 
+    "contentImgs":["/public_assets/sample.png","/public_assets/sample.png","/public_assets/sample.png"]    
+    },{
+    "profileImg": "/public_assets/sample-profile.png",
+    "nickName" : "닉네임123",
+    "distance" : "5km",
+    "date" : "10분 전",
+    "contentText": "질문이 있습니다. 질문이 있습니다. 질문이 있습니다.질문이 있습니다.질문이 있습니다. 질문이 있습니다.질문이 있습니다.", 
+    "contentImgs":["/public_assets/sample.png"]    
+    }
+]
