@@ -1,8 +1,8 @@
-import imgNaver from "assets/images/login-naver.png"
 import imgKaKao from "assets/images/login-kakao.png"
 import imgGoogle from "assets/images/login-google.png"
 import imgEtc from "assets/images/login-etc.png"
 import Button from "components/common/Button"
+import NaverLogin from "components/NaverLogin"
 
 const Login = () => {
   return (
@@ -35,9 +35,7 @@ const Login = () => {
         <p className="title4-KR">간편 로그인</p>
         <ul className="login-social-list">
           <li>
-            <a href="#">
-              <img src={imgNaver} alt="네이버 로그인" />
-            </a>
+            <NaverLogin />
           </li>
           <li>
             <a href="#">
