@@ -8,6 +8,7 @@ import AddItem from "pages/AddItem"
 import TownInfo from "pages/TownInfo"
 import MyPage from "pages/MyPage"
 import KakaoRedirectHandler from "components/snsLogin/KakaoRedirectHandler"
+import NaverRedirectHandler from "components/snsLogin/NaverRedirectHandler"
 
 import { Route, Routes } from "react-router-dom"
 
@@ -23,6 +24,7 @@ function App() {
       <Route path="/townInfo" element={<TownInfo />} />
       <Route path="/myPage" element={<MyPage />} />
       <Route path="/oauth/callback/kakao" element={<KakaoRedirectHandler />} />
+      <Route path="/oauth/callback/naver" element={<NaverRedirectHandler />} />
       <Route path="/*" element={<div style={{ fontSize: "38px", textAlign: "center" }}>페이지가 없어요</div>} />
     </Routes>
   )

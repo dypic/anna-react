@@ -5,6 +5,7 @@ import { useGoogleLogin } from "@react-oauth/google"
 const GoogleLoginBtn = () => {
   const login = useGoogleLogin({
     onSuccess: (res) => console.log(res),
+    //res.access_token을 벡엔드에 전달하고 메인 화면으로 이동합니다.
   })
 
   return (
