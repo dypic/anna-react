@@ -18,6 +18,7 @@ module.exports = {
   },
   plugins: ["react"],
   rules: {
+    camelcase: "off", // 카멜케이스 안함
     indent: "off",
     "linebreak-style": 0,
     semi: ["error", "never"], // 세미클론 없음

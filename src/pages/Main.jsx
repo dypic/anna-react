@@ -3,6 +3,7 @@ import NavSection from "components/layout/NavSection"
 import StuffItem from "components/StuffItem"
 import storeItemsData from "data/storeItemsData.json"
 import { useState } from "react"
+import { useLocation } from "react-router-dom"
 
 const Main = () => {
   const [data, setData] = useState(storeItemsData)

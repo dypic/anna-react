@@ -1,8 +1,7 @@
-import imgKaKao from "assets/images/login-kakao.png"
-import imgGoogle from "assets/images/login-google.png"
 import imgEtc from "assets/images/login-etc.png"
 import Button from "components/common/Button"
 import NaverLogin from "components/snsLogin/NaverLogin"
+import KakaoLogin from "components/snsLogin/KakaoLogin"
 import GoogleLoginBtn from "components/snsLogin/GoogleLoginBtn"
 
 const Login = () => {
@@ -39,7 +38,7 @@ const Login = () => {
             <NaverLogin />
           </li>
           <li>
-            <img src={imgKaKao} alt="카카오 로그인" />
+            <KakaoLogin />
           </li>
           <li>
             <GoogleLoginBtn />
