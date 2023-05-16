@@ -2,7 +2,8 @@ import imgKaKao from "assets/images/login-kakao.png"
 import imgGoogle from "assets/images/login-google.png"
 import imgEtc from "assets/images/login-etc.png"
 import Button from "components/common/Button"
-import NaverLogin from "components/NaverLogin"
+import NaverLogin from "components/snsLogin/NaverLogin"
+import GoogleLoginBtn from "components/snsLogin/GoogleLoginBtn"
 
 const Login = () => {
   return (
@@ -38,19 +39,13 @@ const Login = () => {
             <NaverLogin />
           </li>
           <li>
-            <a href="#">
-              <img src={imgKaKao} alt="카카오 로그인" />
-            </a>
+            <img src={imgKaKao} alt="카카오 로그인" />
           </li>
           <li>
-            <a href="#">
-              <img src={imgGoogle} alt="구글 로그인" />
-            </a>
+            <GoogleLoginBtn />
           </li>
           <li>
-            <a href="#">
-              <img src={imgEtc} alt="기타 로그인" />
-            </a>
+            <img src={imgEtc} alt="기타 로그인" />
           </li>
         </ul>
         <p className="small1">
