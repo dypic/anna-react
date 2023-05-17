@@ -74,7 +74,7 @@ const HeadersSection = () => {
         </ul>
       </header>
       <ul className={`side-filter title4-KR ${openFilter ? "on" : ""}`}>
-        <li className="side-filter__close-btn side-filter-item" style={{ padding: "0" }}>
+        <li className="side-filter__close-btn side-filter-item" style={{ padding: "0 0 0 3.6rem" }}>
           <button
             type="button"
             onClick={() => {
