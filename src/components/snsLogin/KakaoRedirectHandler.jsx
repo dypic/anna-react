@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React, { useEffect } from "react"
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
@@ -9,11 +10,11 @@ const KakaoRedirectHandler = () => {
     const code = params.get("code") // 인가코드 받는 부분
     const grant_type = "authorization_code"
     const client_id = process.env.REACT_APP_KAKAO_CLIENT_SECRET
-    const readurect_uri = process.env.REACT_APP_KAKAO_REDIRECT_URL
+    const redirect_uri = process.env.REACT_APP_KAKAO_REDIRECT_URL
 
     axios
       .post(
-        `https://kauth.kakao.com/oauth/token?grant_type=${grant_type}&client_id=${client_id}&redirect_uri=${readurect_uri}&code=${code}`,
+        `https://kauth.kakao.com/oauth/token?grant_type=${grant_type}&client_id=${client_id}&redirect_uri=${redirect_uri}&code=${code}`,
         {
           headers: {
             "Content-type": "application/x-www-form-urlencoded;charset=utf-8",
