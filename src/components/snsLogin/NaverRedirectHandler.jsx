@@ -6,7 +6,7 @@ const NaverRedirectHandler = () => {
   const getNaverToken = () => {
     if (!location.hash) return
     const token = location.hash.split("=")[1].split("&")[0]
-    console.log(token)
+    // console.log(token)
     // 백엔드에 전달합니다. 메인화면으로 이동합니다
   }
   getNaverToken()
