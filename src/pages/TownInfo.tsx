@@ -4,22 +4,26 @@ import TabQuestion from "components/TabQuestion"
 import TownTodayPopular from "components/TownTodayPopular"
 import popularPostData from "data/popularPostData.json"
 
-import { useRef, useState } from "react"
+import React, { useRef, useState } from "react"
 
-const TownInfo = () => {
-  const [focusTab, setFocusTab] = useState("질문")
-  const movingBar = useRef()
+type TabProps = (tab: React.MouseEvent<HTMLLIElement, MouseEvent>, text: string) => void
+
+const TownInfo: React.FC = () => {
+  const [focusTab, setFocusTab] = useState<string>("질문")
+  const movingBar = useRef<HTMLUListElement>(null)
 
   const Tabs = ["질문", "분실물 센터", "모임"]
-  const changeTab = (tab, text) => {
+  const changeTab: TabProps = (tab, text) => {
     // 바 이동
-    const parentLeft = movingBar.current.getBoundingClientRect().left
-    const divLeft = tab.target.getBoundingClientRect().left
-    const divWidth = tab.target.clientWidth
-    const bar = document.querySelector(".tap-moving-bar")
-    bar.style.left = `${divLeft - parentLeft}px`
-    bar.style.width = `${divWidth}px`
-
+    if (movingBar.current) {
+      const parentLeft = movingBar.current.getBoundingClientRect().left
+      const eventTarget = tab.target as HTMLElement
+      const divLeft = eventTarget.getBoundingClientRect().left
+      const divWidth = eventTarget.clientWidth
+      const bar = document.querySelector(".tap-moving-bar") as HTMLElement
+      bar.style.left = `${divLeft - parentLeft}px`
+      bar.style.width = `${divWidth}px`
+    }
     setFocusTab(text)
   }
   return (

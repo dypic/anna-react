@@ -1,4 +1,18 @@
-const TownTodayPopular = ({ item, index }) => {
+import React from "react"
+
+type popularPostType = {
+  img: string
+  label: string
+  title: string
+  like: string
+  comment: string
+}
+interface TownTodayPopularProps {
+  item: popularPostType
+  index: number
+}
+
+const TownTodayPopular: React.FC<TownTodayPopularProps> = ({ item, index }) => {
   return (
     <li key={index}>
       <span className="townInfo-popular-posts__label small3">{index + 1}</span>

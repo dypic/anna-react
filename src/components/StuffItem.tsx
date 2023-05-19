@@ -1,9 +1,24 @@
 import imgIconLikeOn from "assets/images/icon-like-on.svg"
 import imgIconLike from "assets/images/icon-like.svg"
+import React from "react"
 
-const StuffItem = ({ item, index, onClickLike }) => {
+type stuffItem = {
+  title: string
+  distance: string
+  price: string
+  date: string
+  img: string
+  like: string
+}
+interface StuffItemProps {
+  item: stuffItem
+  index: number
+  onClickLike: (index: number) => void
+}
+
+const StuffItem: React.FC<StuffItemProps> = ({ item, index, onClickLike }) => {
   return (
-    <li className="storeList-inner" key={index}>
+    <li className="storeList-inner">
       <a href="#" className="storeList-inner-link">
         <div className="storeList-img">
           <img src={item.img} alt="샘플이미지" />

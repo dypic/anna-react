@@ -3,8 +3,9 @@ import NavSection from "components/layout/NavSection"
 import imgIconPointer from "assets/images/icon-pointer.png"
 import imgSampleProfile from "assets/images/sample-profile.png"
 import { Link } from "react-router-dom"
+import React from "react"
 
-const MyPage = () => {
+const MyPage: React.FC = () => {
   return (
     <div className="container-maxWidth">
       <HeadersSection />
@@ -21,10 +22,10 @@ const MyPage = () => {
             </Link>
           </li>
           <li>
-            <a href="#">
+            <Link to="/chatting/:id">
               <span className="title4-KR">채팅</span>
               <img src={imgIconPointer} alt="채팅" />
-            </a>
+            </Link>
           </li>
           <li>
             <a href="#">

@@ -1,18 +1,27 @@
 import HeadersSection from "components/layout/HeaderSection"
 import NavSection from "components/layout/NavSection"
 import StuffItem from "components/StuffItem"
-import storeItemsData from "data/storeItemsData.json"
-import { useState } from "react"
-import { useLocation } from "react-router-dom"
+import getItemsData from "data/getItemsData.json"
+import React, { useState } from "react"
 
-const Main = () => {
-  const [data, setData] = useState(storeItemsData)
-  const onClickLike = (idx) => {
-    const copy = [...data]
+type stuffItem = {
+  title: string
+  distance: string
+  price: string
+  date: string
+  img: string
+  like: string
+}
+
+const GetItems: React.FC = () => {
+  const [data, setData] = useState<stuffItem[]>(getItemsData)
+  const onClickLike = (idx: number) => {
     if (data[idx].like === "false") {
+      const copy = [...data]
       copy[idx].like = "true"
       setData(copy)
     } else {
+      const copy = [...data]
       copy[idx].like = "false"
       setData(copy)
     }
@@ -31,4 +40,4 @@ const Main = () => {
     </div>
   )
 }
-export default Main
+export default GetItems

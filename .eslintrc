@@ -1,28 +1,47 @@
-module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
   },
-  extends: ["plugin:react/recommended", "airbnb"],
-  overrides: [],
-  parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
+  "extends": ["plugin:@typescript-eslint/recommended", "plugin:prettier/recommended", "airbnb"],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": "./tsconfig.json"
   },
-  settings: {
+  "settings": {
     "import/resolver": {
-      node: {
-        paths: ["src"],
-      },
-    },
+      "node": {
+        "paths": ["src"],
+        "extensions": [
+          ".js",
+          //   '.jsx',
+          ".ts",
+          ".tsx"
+        ]
+      }
+    }
   },
-  plugins: ["react"],
-  rules: {
-    camelcase: "off", // 카멜케이스 안함
-    indent: "off",
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "import", "react"],
+  "rules": {
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+   ], // 타입스크립트
+   "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }], // 타입스크립트
+    "camelcase": "off", // 카멜케이스 안함
+    "indent": "off",
     "linebreak-style": 0,
-    semi: ["error", "never"], // 세미클론 없음
-    quotes: ["error", "double"], // 더블 쿼터 사용
+    "semi": ["error", "never"], // 세미클론 없음
+    "quotes": ["error", "double"], // 더블 쿼터 사용
     "no-unused-vars": "off", // 사용안한 변수 경고 중복
     "jsx-a11y/control-has-associated-label": "off", // 상호작용하는 엘리먼트에 label을 넣는다
     "react/no-array-index-key": "off", // key값으로 index를 사용할수 있다.
@@ -43,11 +62,8 @@ module.exports = {
     "no-nested-ternary": "off", // 삼항연산자
     "react/function-component-definition": [
       2,
-      { namedComponents: ["arrow-function", "function-declaration"] }, // 함수 스타일 지정
+      { "namedComponents": ["arrow-function", "function-declaration"] } // 함수 스타일 지정
     ],
-    "react/jsx-filename-extension": [
-      1,
-      { extensions: [".js", ".jsx"] }, // jsx사용가능한 확장자 설정
-    ],
-  },
+    "react/require-default-props": "off" // 기본값
+  }
 }

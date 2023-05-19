@@ -1,8 +1,7 @@
-import imgSample from "assets/images/sample.png"
-import imgSampleProfile from "assets/images/sample-profile.png"
 import questionData from "data/questionData.json"
+import React from "react"
 
-const TabQuestion = () => {
+const TabQuestion: React.FC = () => {
   return (
     <li className="townInfo-taps__content">
       <ul>

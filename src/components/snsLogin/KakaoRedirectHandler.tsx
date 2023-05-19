@@ -1,10 +1,8 @@
 /* eslint-disable no-console */
 import React, { useEffect } from "react"
 import axios from "axios"
-import { useNavigate } from "react-router-dom"
 
-const KakaoRedirectHandler = () => {
-  const navigate = useNavigate()
+const KakaoRedirectHandler: React.FC = () => {
   useEffect(() => {
     const params = new URL(document.location.toString()).searchParams
     const code = params.get("code") // 인가코드 받는 부분

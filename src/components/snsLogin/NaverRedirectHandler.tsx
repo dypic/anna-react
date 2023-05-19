@@ -1,12 +1,14 @@
+import React from "react"
 import { useLocation } from "react-router-dom"
 
-const NaverRedirectHandler = () => {
+const NaverRedirectHandler: React.FC = () => {
   const location = useLocation()
 
   const getNaverToken = () => {
     if (!location.hash) return
     const token = location.hash.split("=")[1].split("&")[0]
-    // console.log(token)
+    // eslint-disable-next-line no-console
+    console.log(token)
     // 백엔드에 전달합니다. 메인화면으로 이동합니다
   }
   getNaverToken()

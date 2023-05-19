@@ -3,8 +3,9 @@ import Button from "components/common/Button"
 import NaverLogin from "components/snsLogin/NaverLogin"
 import KakaoLogin from "components/snsLogin/KakaoLogin"
 import GoogleLoginBtn from "components/snsLogin/GoogleLoginBtn"
+import React from "react"
 
-const Login = () => {
+const Login: React.FC = () => {
   return (
     <div className="login container-maxWidth">
       <div className="login-form">

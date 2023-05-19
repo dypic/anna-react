@@ -8,12 +8,12 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/swiper.min.css"
 import "swiper/swiper-bundle.css"
 import Button from "components/common/Button"
-import { useState } from "react"
+import React, { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
-const StoreItem = () => {
+const StoreItem: React.FC = () => {
   const navigate = useNavigate()
-  const [like, setLike] = useState(false)
+  const [like, setLike] = useState<boolean>(false)
 
   return (
     <div className="container-maxWidth storeItem">

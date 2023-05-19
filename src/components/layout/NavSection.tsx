@@ -5,12 +5,12 @@ import imgIconOwnOn from "assets/images/icon-gnb-b04.svg"
 
 import imgIconHome from "assets/images/icon-gnb-w01.svg"
 import imgIconGet from "assets/images/icon-gnb-w02.svg"
-import imgIconAdd from "assets/images/icon-gnb-add.svg"
 import imgIconTown from "assets/images/icon-gnb-w03.svg"
 import imgIconOwn from "assets/images/icon-gnb-w04.svg"
+import React from "react"
 import { Link, useLocation, useNavigate } from "react-router-dom"
 
-const NavSection = () => {
+const NavSection: React.FC = () => {
   const location = useLocation()
   const locationIcon = location.pathname
   const navigate = useNavigate()

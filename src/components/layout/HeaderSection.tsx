@@ -3,16 +3,18 @@ import imgIconAlarm from "assets/images/icon-alarm.svg"
 import imgIconMenu from "assets/images/icon-menu.svg"
 import imgIconPointer from "assets/images/icon-pointer.png"
 import imgIconClose from "assets/images/icon-close.png"
-import { useRef, useState } from "react"
+import React, { useRef, useState } from "react"
 import { useNavigate, useLocation } from "react-router-dom"
 
-const HeadersSection = () => {
+const HeadersSection: React.FC = () => {
   const navigate = useNavigate()
-  const [openFilter, setOpenFilter] = useState(false)
-  const depth2 = useRef()
+  const [openFilter, setOpenFilter] = useState<boolean>(false)
+  const depth2 = useRef<HTMLButtonElement | null>(null)
   const depth2Toggle = () => {
-    depth2.current.classList.toggle("on")
-    depth2.current.nextElementSibling.classList.toggle("on")
+    if (depth2.current) {
+      depth2.current.classList.toggle("on")
+      depth2.current.nextElementSibling?.classList.toggle("on")
+    }
   }
 
   const location = useLocation()
@@ -38,17 +40,6 @@ const HeadersSection = () => {
             <img src={imgIconPointer} alt="뒤로가기" />
           </button>
         )}
-        {/* {locationIcon === "/" ? (
-          <p className="home-title heading1-KR">안나</p>
-        ) : locationIcon === "/getItem" ? (
-          <p className="home-title heading1-KR">구해요</p>
-        ) : locationIcon === "/townInfo" ? (
-          <p className="home-title heading1-KR">동네정보</p>
-        ) : (
-          <button type="button" onClick={() => navigate(-1)} className="header-inner-back">
-            <img src={imgIconPointer} alt="뒤로가기" />
-          </button>
-        )} */}
         <ul className="home-topIcon">
           <li>
             <button type="button">
@@ -65,7 +56,7 @@ const HeadersSection = () => {
               type="button"
               onClick={() => {
                 setOpenFilter(true)
-                document.querySelector("body").style.overflow = "hidden"
+                document.querySelector("body")!.style.overflow = "hidden"
               }}
             >
               <img src={imgIconMenu} alt="메뉴" />
@@ -79,7 +70,7 @@ const HeadersSection = () => {
             type="button"
             onClick={() => {
               setOpenFilter(false)
-              document.querySelector("body").style.overflow = "auto"
+              document.querySelector("body")!.style.overflow = "auto"
             }}
           >
             <img src={imgIconClose} alt="닫기" />

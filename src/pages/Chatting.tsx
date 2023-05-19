@@ -1,12 +1,12 @@
 import imgIconPointer from "assets/images/icon-back.svg"
 import imgIconPlusCircle from "assets/images/icon-message_plus.png"
-import { useState } from "react"
+import React, { useState } from "react"
 import Button from "components/common/Button"
 import { useNavigate } from "react-router-dom"
 
-const Chatting = () => {
+const Chatting: React.FC = () => {
   const navigate = useNavigate()
-  const [openPopup, setOpenPopup] = useState(false)
+  const [openPopup, setOpenPopup] = useState<boolean>(false)
 
   return (
     <>

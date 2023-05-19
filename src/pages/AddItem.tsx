@@ -1,24 +1,25 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import imgIconPlus from "assets/images/icon-plus.svg"
 import imgIconPointer from "assets/images/icon-pointer.png"
+import React from "react"
 
-const AddItem = () => {
+const AddItem: React.FC = () => {
   // 이미지 업로드시 파일 li로 넣어주기
-  function loadFile(ImgFile) {
+  function loadFile(ImgFile: React.ChangeEvent<any>) {
     const uploadFiles = Array.from(ImgFile.target.files)
-    uploadFiles.forEach((file) => {
+    uploadFiles.forEach((file: any) => {
       const container = document.getElementById("imgList")
       const newLi = document.createElement("li")
       const newImage = document.createElement("img")
 
       newImage.setAttribute("class", "adding-img")
       newImage.src = URL.createObjectURL(file)
-      container.appendChild(newLi).appendChild(newImage)
+      container?.appendChild(newLi).appendChild(newImage)
     })
   }
   // 초기화 버튼 클릭시 초기화
   function textClear() {
-    const textarea = document.getElementById("textareaClear")
+    const textarea = document.getElementById("textareaClear") as HTMLTextAreaElement
     textarea.value = ""
   }
   return (
