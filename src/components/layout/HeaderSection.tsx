@@ -1,8 +1,8 @@
 import imgIconSearch from "assets/images/icon-search.svg"
 import imgIconAlarm from "assets/images/icon-alarm.svg"
 import imgIconMenu from "assets/images/icon-menu.svg"
-import imgIconPointer from "assets/images/icon-pointer.png"
-import imgIconClose from "assets/images/icon-close.png"
+import imgIconPointer from "assets/images/icon-pointer.svg"
+import imgIconClose from "assets/images/icon-close.svg"
 import React, { useRef, useState } from "react"
 import { useNavigate, useLocation } from "react-router-dom"
 

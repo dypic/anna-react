@@ -1,5 +1,5 @@
 import imgIconPointer from "assets/images/icon-back.svg"
-import imgIconPlusCircle from "assets/images/icon-message_plus.png"
+import imgIconPlusCircle from "assets/images/icon-message_plus.svg"
 import React, { useState } from "react"
 import Button from "components/common/Button"
 import { useNavigate } from "react-router-dom"

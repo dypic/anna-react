@@ -1,6 +1,6 @@
 import HeadersSection from "components/layout/HeaderSection"
 import NavSection from "components/layout/NavSection"
-import imgIconPointer from "assets/images/icon-pointer.png"
+import imgIconPointer from "assets/images/icon-pointer.svg"
 import imgSampleProfile from "assets/images/sample-profile.png"
 import { Link } from "react-router-dom"
 import React from "react"

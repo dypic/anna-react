@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import imgIconPlus from "assets/images/icon-plus.svg"
-import imgIconPointer from "assets/images/icon-pointer.png"
+import imgIconPointer from "assets/images/icon-pointer.svg"
 import React from "react"
 
 const AddItem: React.FC = () => {

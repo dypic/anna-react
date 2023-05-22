@@ -1,117 +1,118 @@
-.chatting{
+.chatting {
+  .btn-s {
+    width: 50%;
+  }
+  &-header {
+    padding: 0 1.6rem 1.6rem;
+    border-bottom: 1px solid $color-gray04;
+    &-location {
+      height: 4.4rem;
+      display: flex;
+      align-items: center;
+      button {
+        width: 2.4rem;
+        display: inline-block;
+        margin-right: 2rem;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    &-btns {
+      display: flex;
+      gap: 1.2rem;
+    }
+  }
+  &-main {
+    margin: 1.2rem 1.6rem 0;
+    li:not(:first-child) {
+      margin-top: 1.2rem;
+    }
+    &-me span,
+    &-other span {
+      display: inline-block;
+      padding: 1rem 2rem;
+      border-radius: 3rem;
+    }
+    &-me {
+      text-align: right;
+    }
+    &-me span {
+      background-color: $color01;
+    }
+    &-other span {
+      background-color: $color-gray04;
+    }
+  }
+  &-message {
+    max-width: 72rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    border-top: 1px solid $color-gray04;
+    padding: 1.6rem 1.6rem 3.4rem;
+    align-items: center;
+    a {
+      width: 2rem;
+      margin-right: 1.2rem;
+      img {
+        width: 100%;
+      }
+    }
+    input {
+      width: calc(100% - 3.2rem);
+      height: 4.4rem;
+      border: 1px solid $color-gray04;
+      background-color: $color-gray05;
+      border-radius: 0.4rem;
+      text-indent: 1.8rem;
+    }
+  }
+  &-popup {
+    margin: 0 auto;
+    max-width: 72rem;
     .btn-s {
-        width: 50%;
+      width: 50%;
     }
-    &-header {
-        padding: 0 1.6rem 1.6rem;
-        border-bottom: 1px solid $color-gray04;
-        &-location{
-            height: 4.4rem;
-            display: flex;
-            align-items: center;
-           button {
-            width: 2.4rem;
-            display: inline-block;
-            margin-right: 2rem;
-            img {
-                width: 100%;
-            }
-           }
-        }
-        &-btns {
-            display: flex;
-            gap: 1.2rem;
-        }
-    }
-    &-main {
-        margin: 1.2rem 1.6rem 0;
-        li:not(:first-child) {
-            margin-top: 1.2rem;
-        }
-        &-me span, &-other span{
-            display: inline-block;
-            padding: 1rem 2rem;
-            border-radius: 3rem;
-        }
-        &-me {
-            text-align: right;
-        }
-        &-me span{
-            background-color: $color01;
-        }
-        &-other span{
-            background-color: $color-gray04;
-        }
-    }
-    &-message {
-        max-width: 72rem;
-        position: fixed;
-        bottom: 0; 
+    &__wrap {
+      width: 100%;
+      max-width: 72rem;
+      padding: 1.6rem 1.6rem 3.4rem;
+      position: fixed;
+      z-index: 6;
+      bottom: 0;
+      box-sizing: border-box;
+      border-radius: 0.4rem 0.4rem 0 0;
+      background-color: $color-gray06;
+      &-item {
+        -webkit-appearance: none; /* 네이티브 외형 감추기 */
+        -moz-appearance: none;
+        appearance: none;
+        background: url("/assets/images/icon-select.svg") no-repeat calc(100% - 2rem) 50%; /* 화살표 모양의 이미지 */
+        background-size: 16px;
+        border-color: $color-gray04;
+        border-radius: 4px;
         width: 100%;
         box-sizing: border-box;
-        display: flex;
-        border-top: 1px solid $color-gray04;
-        padding: 1.6rem 1.6rem 3.4rem;
-        align-items: center;
-        a {
-            width: 2rem;
-            margin-right: 1.2rem;
-            img {
-                width: 100%;
-            }
-        }
-        input {
-            width: calc(100% - 3.2rem);
-            height: 4.4rem;
-            border: 1px solid $color-gray04;
-            background-color: $color-gray05;
-            border-radius: 0.4rem;
-            text-indent: 1.8rem;
-        }
+        height: 4.4rem;
+        margin-bottom: 10.5rem;
+        padding: 0 2rem;
+      }
     }
-    &-popup {
-        margin: 0 auto;
-        max-width: 72rem;
-        .btn-s {
-            width: 50%;
-        }
-        &__wrap {
-            width: 100%;
-            max-width: 72rem;
-            padding: 1.6rem 1.6rem 3.4rem;
-            position: fixed;
-            z-index: 6;
-            bottom: 0;
-            box-sizing: border-box;
-            border-radius: 0.4rem 0.4rem 0 0;
-            background-color: $color-gray06;
-            &-item {
-                -webkit-appearance: none; /* 네이티브 외형 감추기 */ 
-                -moz-appearance: none; 
-                appearance: none;
-                background: url('/assets/images/icon-select.png') no-repeat calc(100% - 2rem) 50%; /* 화살표 모양의 이미지 */ 
-                background-size: 16px;
-                border-color: $color-gray04;
-                border-radius: 4px;
-                width: 100%;
-                box-sizing: border-box;
-                height: 4.4rem;
-                margin-bottom: 10.5rem;
-                padding: 0 2rem;
-            }
-        }
-        &__btns {
-            display: flex;
-            gap: 1.2rem;
-        }
-        &-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 5;
-            height: 100vh;
-            width: 100vw;
-            background-color: rgba($color: $color-gray01, $alpha: 0.25);
-        }
+    &__btns {
+      display: flex;
+      gap: 1.2rem;
     }
+    &-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 5;
+      height: 100vh;
+      width: 100vw;
+      background-color: rgba($color: $color-gray01, $alpha: 0.25);
+    }
+  }
 }
